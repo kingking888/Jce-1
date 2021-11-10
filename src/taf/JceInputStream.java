@@ -302,6 +302,13 @@ public final class JceInputStream {
         }
     }
 
+    /**
+     *
+     * @param jceStruct
+     * @param i:tag
+     * @param z:可否判空
+     * @return
+     */
     public JceStruct read(JceStruct jceStruct, int i, boolean z) {
         JceStruct jceStruct2;
         if (skipToTag(i)) {
@@ -864,7 +871,12 @@ public final class JceInputStream {
 //        }
 //    }
 
-public boolean skipToTag(int tag) {
+    /**
+     *跳转到byteBuffer tag的点
+     * @param tag
+     * @return
+     */
+    public boolean skipToTag(int tag) {
         try {
             HeadData headData = new HeadData();
 
